@@ -1,0 +1,31 @@
+{{template "base" .}}
+
+{{define "path"}}/{{end}}
+{{define "title"}}Home{{end}}
+{{define "description"}}Home page for {{template "site_name" .}}.  Find people online using our free website.{{end}}
+{{define "add_head"}}{{end}}
+
+{{define "main"}}
+
+<div class="slight-margin center">
+    <h1 class="title">
+        {{template "site_name" .}}
+    </h1>
+    <h2 class="subtitle">
+        Find the name, phone number, and address of over 100 million American businesses and residents.
+    </h2>
+
+    <form class="field has-addons" method="get" action="/search">
+        <div class="control" style="width: 100%">
+            <div class="control">
+                <input class="input is-large" type="search" placeholder="Name&hellip;" name="q">
+            </div>
+        </div>
+        <div class="field">
+            <div class="control">
+                <button class="button is-large is-link" type="submit">Search</button>
+            </div>
+        </div>
+    </form>
+</div>
+{{end}}

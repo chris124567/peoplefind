@@ -1,0 +1,19 @@
+{{template "base" .}}
+
+{{define "path"}}error{{end}}
+{{define "title"}}Error{{end}}
+
+{{define "main"}}
+<section class="hero is-small is-danger">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Error
+      </h1>
+      <h2 class="subtitle">
+        An error was encountered when loading this page.  Try visiting the <a href="/">home page</a> and trying again.
+      </h2>
+    </div>
+  </div>
+</section>
+{{end}}

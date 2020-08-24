@@ -1,0 +1,19 @@
+{{template "base" .}}
+
+{{define "path"}}/about{{end}}
+{{define "title"}}About{{end}}
+{{define "description"}}Learn more about {{template "site_name" .}}{{end}}
+
+{{define "add_head"}}{{end}}
+
+{{define "main"}}
+<div class="slight-margin">
+    <h1 class="title is-marginless">
+        ABOUT {{template "site_name_caps" .}}
+    </h1>
+
+    <p>
+        {{template "site_name" .}} is a new public records website.  Our site has information on nearly 100 million American businesses and consumers.  Our site uses a combination of public domain records to produce these results.  It was created by <a href="https://www.linkedin.com/in/christopher-tarry-524537187/">Christopher Tarry</a>, a high school student in Michigan.
+    </p>
+</div>
+{{end}}

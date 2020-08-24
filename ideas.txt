@@ -1,0 +1,44 @@
+People search engine like https://truepeoplesearch.com.  
+
+
+- Scrape sites (need some sort of directory to find all people)
+    - https://www.usa-people-search.com (uses PerimeterX, probably not worth scraping)
+        - https://www.usa-people-search.com/names/a
+        - https://www.usa-people-search.com/names/b
+        - ...
+    - https://www.truthfinder.com/ (no bot detection, but emails are censored)
+        - Has directory by alphabet (full)
+            - https://www.truthfinder.com/people-search/0/
+            - https://www.truthfinder.com/people-search/1/
+            - ..
+    - https://www.truepeoplesearch.com (no bot detection)
+        - Has directory but only shows most common last names
+            - https://www.truepeoplesearch.com/find/a
+            - https://www.truepeoplesearch.com/find/b
+            - ...
+    - https://absolutepeoplesearch.com (no bot detection)
+        - Has directory by state (full)
+            - https://absolutepeoplesearch.com/name_directory.php?state=WA
+            - https://absolutepeoplesearch.com/name_directory.php?state=MA
+            - ...
+    - https://www.fastpeoplesearch.com/ (rate based reCaptcha)
+        - Has directory by alphabet (full)
+            - https://www.fastpeoplesearch.com/names/a
+            - https://www.fastpeoplesearch.com/names/b
+            - ...
+    - https://www.cyberbackgroundchecks.com (PerimeterX, otherwise seems identical to fastpeoplesearch)
+        - Has directory by alphabet (full)
+            - https://www.cyberbackgroundchecks.com/names/a
+            - https://www.cyberbackgroundchecks.com/names/b
+            - ...
+    - https://johndoe.com/ (unknown bot detection)
+        - Has location based sitemap (but this probably results in people without addresses being skipped)
+            - https://johndoe.com/ak
+            - https://johndoe.com/ca
+            - ...
+    - https://www.telephonedirectories.us/
+        - Has location based sitemap
+            - Basically has telephone directory for every city in America with business and people names
+    - https://www.people-search.org/
+        - Has alphabetical sitemap
+        - Small dataset

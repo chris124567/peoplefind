@@ -1,0 +1,60 @@
+{{template "base" .}}
+
+{{define "path"}}/search{{end}}
+{{define "nav_query"}}{{.Query}}{{end}}
+{{define "title"}}Results for {{.Query}}{{end}}
+{{define "description"}}We found {{len .ElasticResult.Hits.Hits}} results for {{.Query}}.{{end}}
+{{define "main"}}
+<div class="slight-margin">
+<ul>
+{{range $i, $imdbentry := .ElasticResult.Hits.Hits}}
+    <li>
+        <div class="card">
+            <header class="card-header">
+                <p class="card-header-title">
+                    {{.Source.Name}}
+                </p>
+            </header>
+            <div class="card-content">
+                <div class="content">
+                    Addresses:
+                    <ol>
+                        {{range $i, $address := .Source.Addresses}}
+                            <li>
+                                {{$address.AddressString}}
+                            </li>
+                        {{end}}
+                    </ol>
+                    Phone Numbers:
+                    <ol>
+                        {{range $i, $number := .Source.PhoneNumbers}}
+                            <li>
+                                {{$number.Number}}
+                            </li>
+                        {{end}}
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </li>
+{{end}}
+</ul>
+<ul>
+    {{if .Pagination.IsPreviousPage}}
+    <li>
+        <a class="button is-link is-pulled-left" href="/search?q={{.Query}}&offset={{.Pagination.PreviousPageOffset}}">
+            Previous
+        </a>
+    </li>
+    {{end}}
+
+    {{if .Pagination.IsNextPage}}
+    <li>
+        <a class="button is-link is-pulled-right"  href="/search?q={{.Query}}&offset={{.Pagination.NextPageOffset}}">
+            Next
+        </a>
+    </li>
+    {{end}}
+</ul>
+</div>
+{{end}}

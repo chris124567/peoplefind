@@ -1,0 +1,94 @@
+{{define "site_name"}}QuickPeopleFind{{end}}
+{{define "site_name_caps"}}QUICKPEOPLEFIND{{end}}
+{{define "site_host"}}https://quickpeoplefind.com{{end}}
+{{define "site_founded"}}2020{{end}}
+{{define "current_year"}}2020{{end}}
+
+{{define "description"}}{{end}}
+{{define "og_type"}}website{{end}}
+{{define "og_image"}}{{template "site_host" .}}/static/img/favicon.png{{end}}
+{{define "add_head"}}{{end}}
+{{define "nav_query"}}{{end}}
+
+{{define "base"}}
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noarchive, noimageindex">
+    <meta name="referrer" content="no-referrer">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="true">
+    <!-- Prevent accidental clicks -->
+    <meta name="format-detection" content="telephone=no, address=no, date=no">
+
+    <meta property="og:title" content="{{template "title" .}} | {{template "site_name" .}}">
+    <meta property="og:type" content="{{template "og_type" .}}">
+    <meta property="og:url" content="{{template "site_host" .}}{{template "path" .}}">
+    <meta property="og:image" content="{{template "og_image" .}}">
+    <meta property="og:description" content="{{template "description" .}}">
+    <meta property="og:site_name" content="{{template "site_name" .}}">
+    <meta name="description" content="{{template "description" .}}">
+
+    <link rel='shortcut icon' type="image/png" href="/static/img/favicon.png">
+    <link type="text/css" rel="stylesheet" href="/static/merged.min.css">
+    <!-- Used https://uncss-online.com/ to merge these -->
+    <!-- <link type="text/css" rel="stylesheet" href="/static/main.min.css"> -->
+    <!-- <link type="text/css" rel="stylesheet" rel="stylesheet" href="/static/bulma.min.css"> -->
+    <title>{{template "title" .}} | {{template "site_name" . }}</title>
+    {{template "add_head" .}}
+</head>
+
+<body class="is-tall"> 
+    <main class="is-tall-container">
+    <nav class="navbar" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                {{template "site_name" .}}
+            </a>
+            <a class="navbar-item" href="/">
+                Home
+            </a>
+            <a class="navbar-item" href="/about">
+                About
+            </a>
+            <a class="navbar-item" href="/privacy-policy">
+                Privacy Policy
+            </a>
+            <a class="navbar-item" href="/terms-of-service">
+                Terms of Service
+            </a>
+        </div>
+
+        <div class="navbar-menu">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <form class="field has-addons" method="get" action="/search">
+                        <div class="control">
+                            <input class="input" type="search" placeholder="Enter name&hellip;" value="{{template "nav_query" .}}" name="q">
+                        </div>
+                        <div class="control">
+                            <button class="button is-link" type="submit">Search</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+        <div>
+            {{template "main" .}}
+        </div>
+    </main>
+
+
+    <footer>
+        <hr class="hr">
+        <div class="footer-margin">
+            {{template "site_name" .}} is not a consumer reporting agency as defined by the Fair Credit Reporting Act (FCRA). Do not use this site to make decisions about employment, tenant screening, or any purpose covered by the FCRA.
+        </div>
+    </footer>
+</body>
+</html>
+{{end}}
