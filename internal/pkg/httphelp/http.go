@@ -61,7 +61,7 @@ func HttpGetHeadersWait(link string, headers map[string]string, length time.Dura
 	}
 
 	if response.StatusCode != 200 {
-		if response.StatusCode >= 400 && response.StatusCode <= 500 { // if client error, wait (longer) and try again 
+		if response.StatusCode >= 400 && response.StatusCode <= 500 { // if client error, wait (longer) and try again
 			return HttpGetHeadersWait(link, headers, length*2)
 		} else {
 			return EMPTY_HTTP_RESPONSE, errors.New("Got non 200 response, " + strconv.Itoa(response.StatusCode))
