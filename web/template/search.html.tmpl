@@ -6,6 +6,11 @@
 {{define "description"}}We found {{len .ElasticResult.Hits.Hits}} results for {{.Query}}.{{end}}
 {{define "main"}}
 <div class="slight-margin">
+{{if eq (len .ElasticResult.Hits.Hits) 0}}
+<h1 class="title">
+    NO RESULTS FOUND
+</h1>
+{{end}}
 <ul>
 {{range $i, $imdbentry := .ElasticResult.Hits.Hits}}
     <li>
