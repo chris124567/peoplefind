@@ -1,5 +1,5 @@
 SCRAPER_OUTPUT_FILE := scraper
-WEB_OUTPUT_FILE := scraper
+WEB_OUTPUT_FILE := webserver
 SCRAPER_FILE := cmd/scraper/main.go
 WEB_FILE := cmd/web/main.go
 

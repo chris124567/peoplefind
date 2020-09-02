@@ -16,7 +16,7 @@ func main() {
 
 	serveMux := http.NewServeMux()
 	httpServer := &http.Server{
-		Addr:         ":5000",
+		Addr:         ":5002",
 		ReadTimeout:  20 * time.Second,
 		WriteTimeout: 20 * time.Second,
 		Handler: http.HandlerFunc(func(writer http.ResponseWriter, request *http.Request) {
