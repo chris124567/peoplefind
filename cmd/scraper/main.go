@@ -14,6 +14,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	scrapers.StartTelephoneDirectoriesScrape(client)
+	// scrapers.StartTelephoneDirectoriesScrape(client)
+	scrapers.StartMiVoterIngest(client)
 
 }

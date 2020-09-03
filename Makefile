@@ -12,7 +12,7 @@ WEB_FILE := cmd/web/main.go
 all:
 	gofmt -s -w .
 	reset
-	go run ${WEB_FILE}
+	go run ${SCRAPER_FILE}
 
 runscraper:
 	gofmt -s -w .
