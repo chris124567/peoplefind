@@ -47,6 +47,7 @@ func StartMiVoterIngest(client *elasticsearch.Client) {
 		people = append(people, person)
 
 		if (i % 10000) == 0 {
+			log.Print(i)
 			elasticSearchBulkPeopleAdd(client, people)
 			people = []models.Person{}
 		}
