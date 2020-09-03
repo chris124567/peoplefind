@@ -22,6 +22,7 @@
             </header>
             <div class="card-content">
                 <div class="content">
+                    {{if gt (len .Source.Addresses) 0}}
                     Addresses:
                     <ol>
                         {{range $i, $address := .Source.Addresses}}
@@ -30,6 +31,8 @@
                             </li>
                         {{end}}
                     </ol>
+                    {{end}}
+                    {{if gt (len .Source.PhoneNumbers) 0}}
                     Phone Numbers:
                     <ol>
                         {{range $i, $number := .Source.PhoneNumbers}}
@@ -38,6 +41,7 @@
                             </li>
                         {{end}}
                     </ol>
+                    {{end}}
                 </div>
             </div>
         </div>
