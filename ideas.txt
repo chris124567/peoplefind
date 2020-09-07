@@ -6,17 +6,17 @@ People search engine like https://truepeoplesearch.com.
         - https://www.usa-people-search.com/names/a
         - https://www.usa-people-search.com/names/b
         - ...
-    - https://www.truthfinder.com/ (no bot detection, but emails are censored)
+    - https://www.truthfinder.com/ (unknown bot detection, emails are censored)
         - Has directory by alphabet (full)
             - https://www.truthfinder.com/people-search/0/
             - https://www.truthfinder.com/people-search/1/
             - ..
-    - https://www.truepeoplesearch.com (no bot detection)
+    - https://www.truepeoplesearch.com (rate limiting)
         - Has directory but only shows most common last names
             - https://www.truepeoplesearch.com/find/a
             - https://www.truepeoplesearch.com/find/b
             - ...
-    - https://absolutepeoplesearch.com (no bot detection)
+    - https://absolutepeoplesearch.com (unknown bot detection)
         - Has directory by state (full)
             - https://absolutepeoplesearch.com/name_directory.php?state=WA
             - https://absolutepeoplesearch.com/name_directory.php?state=MA
@@ -36,7 +36,7 @@ People search engine like https://truepeoplesearch.com.
             - https://johndoe.com/ak
             - https://johndoe.com/ca
             - ...
-    - https://www.telephonedirectories.us/
+    - https://www.telephonedirectories.us/ (no bot detection whatsoever)
         - Has location based sitemap
             - Basically has telephone directory for every city in America with business and people names
     - https://www.people-search.org/
